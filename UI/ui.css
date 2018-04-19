@@ -1,0 +1,115 @@
+body{
+    max-width:70em;
+    width:100%;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 8px #CCC;
+}
+
+.header{
+    width: 100%;
+    min-height: 250px;
+    background-color: skyblue;
+	background-image:url(image/test9.jpg);
+    background-size: cover;
+	background-position:center;
+    position: relative;
+}
+
+.headerTop{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.headerBottom{
+    width: 100%;
+    height: 50px;
+    display: block;
+	position:absolute;
+    top: 90%;
+    background-image: url(image/nav.png);
+}
+
+.nav{
+    width: 100%;
+    height: inherit;
+    display: none;
+    text-align: center;
+}
+
+/*#nav1 a{
+    width: 150px;
+    padding: 15px 0px;
+    display: inline-block;
+    background-image: url(image/nav.png);
+    background-color: #BBB;
+    cursor: pointer;
+}
+
+.nav a:hover{
+    background-color: #2196F3;
+}*/
+
+.main-content{
+    width: inherit;
+    min-height: 800px;
+}
+
+
+/* this section is for the signup and signin form*/
+.form{
+    max-width: 30em;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #CCC;
+    /*background-color: #FAFAFA;*/
+    margin: 50px auto 30px auto;
+}
+
+.form p{
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+#signupForm label{
+    display: inline-block;
+    width: 130px;
+    font-size: 14px;
+}
+
+.input{
+    width: 200px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+}
+
+.pButton{
+    text-align: center;
+}
+
+.pButton input{
+    padding: 2px 6px 3px 6px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: skyblue;
+    font-family: Georgia;
+}
+
+.pButton input:hover{
+}
+
+@media (max-width:384px){
+    #signupForm label{
+        display:block;
+    }
+    .input{
+        width:100%;
+        display: block;
+    }
+}
