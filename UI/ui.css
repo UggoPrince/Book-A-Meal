@@ -43,6 +43,19 @@ body{
     background-image: url(image/nav.png);
 }
 
+.homeCenter{
+    max-width: 60em;
+    width: 90%;
+    text-align: center;
+    font-family: Georgia;
+    margin: 10px auto 0px auto
+}
+
+.homeCenter img{
+    width: 100%;
+    margin: 10px auto 0px auto
+}
+
 /*this section is for navigation*/
 .nav{
     width: 100%;
