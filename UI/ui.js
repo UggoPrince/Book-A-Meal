@@ -11,6 +11,7 @@ var widthChange;
 
 $(document).ready(function(e) {
 	$('#header').load('header.html');
+	$('#footer').load('footer.html');
 });
 
 function toggleMobileMenu(e){
