@@ -105,6 +105,7 @@ body{
     padding: 4px 0px 4px 0px;
     cursor: pointer;
     display: none;
+    text-decoration: none;
 }
 
 #nav2 a:active, a:hover{
@@ -113,10 +114,11 @@ body{
 /*end styling for navigation*/
 
 .main-content{
-    width: inherit;
+    width: 100%;
     min-height: 500px;
     padding-top: 20px;
     padding-bottom: 30px;
+    margin: auto;
 }
 
 
@@ -279,7 +281,6 @@ body{
     border-radius: 3px;
 }
 
-#orderControls input[type="button"]{}
 
 #orderData{
     max-width: 65em;
@@ -390,10 +391,11 @@ body{
     color: white;
 }
 
-#footer{
+.footer{
     width: 100%;
     height: 200px;
     background-color: #444;
+    color: white;
 }
 /*end styling for forms*/
 

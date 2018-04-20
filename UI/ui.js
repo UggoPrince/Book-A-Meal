@@ -11,7 +11,7 @@ var widthChange;
 
 $(document).ready(function(e) {
 	$('#header').load('header.html');
-	$('#footer').load('footer.html');
+	//$('#footer').load('footer.html');
 });
 
 function toggleMobileMenu(e){
@@ -49,8 +49,14 @@ function loadNav(){
 		widthChange.addEventListener('WidthChange', WidthChange);
 	}
 
+	try{
 	mobileNavButton.addEventListener('click', toggleMobileMenu);
 	closeMobileNav.addEventListener('click', toggleMobileMenu);
+}
+catch(e)
+{
+	alert(e.message);
+}
 
 	if(page == "index.html")
 	{
@@ -104,7 +110,6 @@ function loadNav(){
 }
 
 function setup(){
-	loadNav();
 }
 
 document.addEventListener('DOMContentLoaded', setup);
