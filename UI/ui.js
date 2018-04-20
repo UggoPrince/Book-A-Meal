@@ -9,10 +9,10 @@ var closeMobileNav;
 var mobileNavOpen = false;
 var widthChange;
 
-/*$(document).ready(function(e) {
+$(document).ready(function(e) {
 	$('#header').load('header.html');
 	$('#footer').load('footer.html');
-});*/
+});
 
 function toggleMobileMenu(e){
 	if(!mobileNavOpen)
