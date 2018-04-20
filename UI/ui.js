@@ -49,14 +49,15 @@ function loadNav(){
 		widthChange.addEventListener('WidthChange', WidthChange);
 	}
 
-	try{
 	mobileNavButton.addEventListener('click', toggleMobileMenu);
 	closeMobileNav.addEventListener('click', toggleMobileMenu);
-}
-catch(e)
-{
-	alert(e.message);
-}
+
+	/*for(var i = 1; i < 7; i++)
+		{
+			document.getElementById('a' + i).style.textDecoration = "none";
+			document.getElementById('b' + i).style.textDecoration = "none";
+		}*/
+
 
 	if(page == "index.html")
 	{
