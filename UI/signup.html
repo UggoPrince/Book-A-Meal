@@ -8,8 +8,30 @@
         <script src="ui.js"></script>
     </head>
     <body>
-        <header id="header">
-        </header>
+        <header class="header" id="header">
+        <div class="headerTop">
+            <nav id="nav2">
+        <span id="closeMobileNav"><p>Close</p></span>
+        <a  href="index.html" target="_parent" id="b1" class="navSmall"><p><i class="fa fa-home"></i> Home</p></a>
+        <a id="b4" class="navSmall"><p>Set Menu</p></a>
+        <a id="b5" class="navSmall"><p>Manage Meals</p></a>
+        <a id="b6" class="navSmall"><p>Order History</p></a>
+        <a href="signin.html" target="_parent" id="b2" class="navSmall"><p>Signin</p></a>
+        <a href="signup.html" target="_parent" id="b3" class="navSmall"><p>Signup</p></a>
+    </nav>
+            <span id="mobileNavButton">Menu</span>
+        </div>
+        <div class="headerBottom">
+            <nav id="nav1" class="nav">
+                <a  href="index.html" target="_parent" id="a1" class="navBig"><i class="fa fa-home"></i> Home</a>
+                <a id="a4" class="navBig">Set Menu</a>
+                <a id="a5" class="navBig">Manage Meals</a>
+                <a id="a6" class="navBig">Order History</a>
+                <a href="signin.html" target="_parent" id="a2" class="navBig">Signin</a>
+                <a href="signup.html" target="_parent" id="a3" class="navBig">Signup</a>
+            </nav>
+        </div>
+	</header>
         <div class="main-content">
             <form method="POST" action="" name="signupForm" id="signupForm" class="form signingForms">
                 <p>
