@@ -25,7 +25,12 @@ body{
 .headerTop span{
     cursor: pointer;
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: black;
+    width: 45px;
+    border-radius: 4px;
+    margin: 5px 0px 0px 5px;
     display: none;
 }
 
