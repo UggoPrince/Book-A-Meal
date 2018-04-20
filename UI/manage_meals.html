@@ -11,6 +11,64 @@
         <header id="header">
         </header>
         <div class="main-content">
+            <div class="holdForms">
+                <!--add-->
+                <form action="" method="POST" id="addMealForm" name="addMealForm" class="form manageMealForms">
+                    <p><h4>Add Meal</h4></p>
+                    <p>
+                        <label for="mealName">Name</label>
+                        <input type="text" name="mealName" id="mealName" class="input" />
+                    </p>
+                    <p>
+                        <label for="mealImage">Image</label>
+                        <input type="file" name="mealImage" id="mealImage" />
+                    </p>
+
+                    <p class="pButton">
+                        <input type="submit" value="Add" />
+                    </p>
+                </form>
+
+                <!--modify-->
+                <form action="" method="POST" id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
+                    <p><h4>Modify Meal</h4></p>
+                    <p>
+                        <label for="selectMeal">Meals</label>
+                        <select name="selectMeal" id="selectMeal" class="select">
+                            <option value="select">Select Meal Option..</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="mealName">Name</label>
+                        <input type="text" name="mealName" id="mealName" class="input" />
+                    </p>
+                    <p>
+                        <label>Image</label>
+                        <input type="file" name="mealImage" id="mealImage" />
+                    </p>
+
+                    <p class="pButton">
+                        <input type="submit" value="Modify" />
+                    </p>
+                </form>
+            </div>
+            
+            <div class="holdForms">
+                <!--delete-->
+                <form action="" method="POST" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
+                    <p><h4>Delete A Meal</h4></p>
+                    <p>
+                        <label for="selectMeal">Meals</label>
+                        <select name="selectMeal" id="selectMeal" class="select">
+                            <option value="select">Select Meal Option..</option>
+                        </select>
+                    </p>
+
+                    <p class="pButton">
+                        <input type="submit" value="Delete" />
+                    </p>
+                </form>
+            </div>
         </div>
     </body>
 </html>

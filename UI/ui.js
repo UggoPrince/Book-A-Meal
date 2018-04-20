@@ -7,6 +7,7 @@ var mobileNavButton;
 var mobileNav;
 var closeMobileNav;
 var mobileNavOpen = false;
+var widthChange;
 
 $(document).ready(function(e) {
 	$('#header').load('header.html');
@@ -25,6 +26,12 @@ function toggleMobileMenu(e){
 	}
 }
 
+function WidthChange(widthChange){
+	if(widthChange.matches){
+		mobileNav.style.display = "none";
+	}
+}
+
 function loadNav(){
 	var url = location.href;
 	var point = url.lastIndexOf('/');
@@ -35,10 +42,16 @@ function loadNav(){
 	mobileNav = document.getElementById('nav2');
 	closeMobileNav = document.getElementById('closeMobileNav');
 
+	if(matchMedia)
+	{
+		widthChange = window.matchMedia("(min-width: 500px)");
+		widthChange.addEventListener('WidthChange', WidthChange);
+	}
+
 	mobileNavButton.addEventListener('click', toggleMobileMenu);
 	closeMobileNav.addEventListener('click', toggleMobileMenu);
 
-	if(page == "signup.html" || page == "signin.html" || page == "index.html")
+	if(page == "index.html")
 	{
 
 		for(var i = 1; i < 4; i++)
@@ -46,6 +59,20 @@ function loadNav(){
 			document.getElementById('a' + i).style.display = "inline-block";
 			document.getElementById('b' + i).style.display = "inline-block";
 		}
+	}
+	else if(page == "signin.html" )
+	{
+		document.getElementById('a1').style.display = "inline-block";
+		document.getElementById('a3').style.display = "inline-block";
+		document.getElementById('b1').style.display = "inline-block";
+		document.getElementById('b3').style.display = "inline-block";
+	}
+	else if(page == "signup.html")
+	{
+		document.getElementById('a1').style.display = "inline-block";
+		document.getElementById('a2').style.display = "inline-block";
+		document.getElementById('b1').style.display = "inline-block";
+		document.getElementById('b2').style.display = "inline-block";
 	}
 	else if(page == "menu.html")
 	{
@@ -57,7 +84,7 @@ function loadNav(){
 		document.getElementById('b2').firstChild.innerHTML = "Logout";
 		document.getElementById('b2').style.display = "inline-block";
 	}
-	else if(page == "manage_meals.html" || page == "set_menu.html" || page == "order_history")
+	else if(page == "manage_meals.html" || page == "set_menu.html" || page == "order_history.html")
 	{
 		document.getElementById('a1').style.display = "inline-block";
 		document.getElementById('a4').style.display = "inline-block";

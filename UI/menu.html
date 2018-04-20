@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Book A Meal - Menu</title>
+        <title>B.A.M - Menu</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
@@ -11,6 +11,67 @@
         <header id="header">
         </header>
         <div class="main-content">
+            <form action="" method="POST" id="menuForm" name="menuForm" class="">
+                <p><h2>Menu</h2></p>
+                <p class="menuNotice">Dear Comstumer your date box looks empty kindly update your browser!</p><br>
+                <p class="bookDate">
+                    <label>Select Day</label>
+                    <input type="date" id="bookDate" name="bookDate" />
+                </p>
+                <span class="showCase">
+                    <p>
+                        <img src="image/meal1.png" class="setCase" />
+                        <label class="setCase">Rice and Stew</label>
+                        <input type="radio" value="1" name="mealButton" id="radio1" class="setCase" />
+                    </p>
+                    <p>
+                        <img src="image/meal2.jpg" class="setCase" />
+                        <label class="setCase">Okra Soup</label>
+                        <input type="radio" value="2" name="mealButton" id="radio2" class="setCase" />
+                    </p>
+                </span>
+                <span class="showCase">
+                    <p>
+                        <img src="image/meal3.jpg" class="setCase" />
+                        <label class="setCase">Egusi and Eba</label>
+                        <input type="radio" value="3" name="mealButton" id="radio3" class="setCase" />
+                    </p>
+                    <p>
+                        <img src="image/meal4.jpg" class="setCase" />
+                        <label class="setCase">Amala and Ewedu</label>
+                        <input type="radio" value="4" name="mealButton" id="radio2" class="setCase" />
+                    </p>
+                </span>
+                <span class="showCase">
+                    <p>
+                        <img src="image/meal5.jpg" class="setCase" />
+                        <label class="setCase">Pizza</label>
+                        <input type="radio" value="5" name="mealButton" id="radio5" class="setCase" />
+                    </p>
+                    <p>
+                        <img src="image/meal6.jpg" class="setCase" />
+                        <label class="setCase">Fried Rice</label>
+                        <input type="radio" value="6" name="mealButton" id="radio6" class="setCase" />
+                    </p>
+                </span>
+                <span class="showCase">
+                    <p>
+                        <img src="image/meal7.jpg" class="setCase" />
+                        <label class="setCase">Dodo and Eggs</label>
+                        <input type="radio" value="7" name="mealButton" id="radio7" class="setCase" />
+                    </p>
+                    <p>
+                        <img src="image/meal8.jpg" class="setCase" />
+                        <label class="setCase">Tea</label>
+                        <input type="radio" value="8" name="mealButton" id="radio8" class="setCase" />
+                    </p>
+                </span>
+                <span>
+                    <p class="pButton">
+                        <input type="submit" value="Book" />
+                    </p>
+                </span>
+            </form>
         </div>
     </body>
 </html>
