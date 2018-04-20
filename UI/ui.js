@@ -104,6 +104,7 @@ function loadNav(){
 }
 
 function setup(){
+	loadNav();
 }
 
 document.addEventListener('DOMContentLoaded', setup);
