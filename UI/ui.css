@@ -7,6 +7,8 @@ a{
     max-width: 950px;
     display: block;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
     margin: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     box-shadow: 0px 0px 8px #CCC;
@@ -14,7 +16,7 @@ a{
 
 .header{
     width: 100%;
-    min-height: 250px;
+    min-height: 35vh;
     background-color:#111;
 	background-image:url(image/test9.jpg);
     background-size: cover;
@@ -26,6 +28,10 @@ a{
     width: 100%;
     height: 200px;
     padding-top: 10px;
+    background-image: url(image/headertop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
 }
 
@@ -65,6 +71,26 @@ a{
     display: block;
     border-radius: 5px;
     margin: 10px auto 0px auto
+}
+
+.main-content{
+    width: 100%;
+    min-height: 45vh;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    min-height: 20vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-top: 20px;
+    background-color: #444;
+    color: white;
 }
 
 /*this section is for navigation*/
@@ -124,13 +150,7 @@ a{
 }
 /*end styling for navigation*/
 
-.main-content{
-    width: 100%;
-    min-height: 500px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    margin: auto;
-}
+
 
 
 /* this section is for the forms*/
@@ -173,7 +193,7 @@ a{
 /*menu section*/
 
 #menuForm{
-    max-width: 70em;
+    max-width: 850px;
     width: 90%;
     padding: 10px;
     box-sizing: border-box;
@@ -212,19 +232,61 @@ a{
 }
 
 .showCase p{
-    text-align: left;
+    text-align: center;
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
     max-width: 25em;
     margin-right: auto;
     margin-left: auto;
     font-size: 14px;
     width: 100%;
+    box-sizing: border-box;
 }
 
- .showCase p img{
-    width: 100px;
+#bookLabel{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.holdMeal{
+    max-width: 250px;
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: wheat;
     border-radius: 4px;
+}
+
+.holdMeal span{
+    display: block;
+    box-sizing: border-box;
+}
+
+.holdMeal label{
+    vertical-align: middle;
+}
+
+.holdMeal input{
+    vertical-align: top;
+}
+
+.mealName{
+    display: block;
+    width: 100%;
+    background-color:whitesmoke;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-sizing: border-box;
+}
+
+ .showCase p span img{
+    width: 170px;
+    height: 120px;
+    margin: 3px auto 3px auto;
+    box-sizing: border-box;
+    /*border-radius: 4px;*/
 }
 /*end menu section*/
 
@@ -328,7 +390,7 @@ a{
 }
 
 .signingForms{
-    max-width: 30em;
+    max-width: 500px;
     margin: 50px auto 0px auto;
 }
 
@@ -402,13 +464,7 @@ a{
     color: white;
 }
 
-.footer{
-    width: 100%;
-    height: 200px;
-    padding-top: 20px;
-    background-color: #444;
-    color: white;
-}
+
 /*end styling for forms*/
 
 @media (max-width:384px){
@@ -428,6 +484,13 @@ a{
         display: block;
     }
 
+    #nav1{
+        display: none;
+    }
+
+    .headerTop span{
+        display: block;
+    }
 
 }
 
@@ -440,8 +503,12 @@ a{
         display: block;
     }
 
+    .container{
+        width: 100%;
+    }
+
     .headerBottom{
-        background-image: url(image/nav3.png);
+        background-image: url(image/nav2.png);
         background-size: cover;
         background-position: center;
     }

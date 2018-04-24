@@ -59,7 +59,7 @@ function loadNav(){
 		}*/
 
 
-	if(page == "index.html")
+	if(page == "index.html" || page == "")
 	{
 
 		for(var i = 1; i < 4; i++)
