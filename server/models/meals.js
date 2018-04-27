@@ -1,7 +1,7 @@
 // this class holds all meal options
 // it is a kind of a database to all options
 
-import exception from 'exception';
+import exception from '../exception';
 
 class Meals{
     constructor()
@@ -31,11 +31,11 @@ class Meals{
             const deMeal = {"mealId":1, "name":name};
             this.mealDB.push(deMeal);
             localStorage.mealOptions = JSON.stringify(this.mealDB);
-            processImage( 1, image);
+            //processImage( 1, image);
         }
         else
         {
-            const mealNum = this.mealDB.length; // total meal options
+            let mealNum = this.mealDB.length; // total meal options
             let nameExist = false;
             for( let i = 0; i < mealNum; i++ )
             {
@@ -50,7 +50,7 @@ class Meals{
                 const deMeal = {"mealId":mealNum, "name":name};
                 this.mealDB.push(deMeal);
                 localStorage.mealOptions = JSON.stringify(this.mealDB);
-                processImage(mealNum, image);
+                //processImage(mealNum, image);
             }
         }
     } // end method addMeal
@@ -66,7 +66,7 @@ class Meals{
         if(image)
         {
             ++id;
-            processImage(id, image);
+            //processImage(id, image);
         }
     } // end method modifyMeal
 
@@ -75,7 +75,7 @@ class Meals{
     {
         this.mealDB[id].splice(id, 1);
         localStorage.mealOptions = JSON.stringify(this.mealDB);
-        processImage(id);
+        //processImage(id);
     } // end method deleteMeal
 
     processImage(id, image = "meal")

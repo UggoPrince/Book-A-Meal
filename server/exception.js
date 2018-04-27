@@ -1,4 +1,4 @@
-export class Exception
+class Exception
 {
     // empty constructor 
     constructor(){} // end constructor
@@ -8,3 +8,5 @@ export class Exception
         alert(m);
     } // end method displayMessage
 } // end class exception
+
+export default Exception;
