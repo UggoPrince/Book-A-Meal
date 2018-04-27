@@ -1,12 +1,17 @@
+import fs from 'fs';
 import meals from '../models/meals';
 
 exports.index = function(req, res){
-    res.send('on the way');
+        //const ff = "<form>"+
+                    //'<input type="text" /></form>';
+        //res.set('Content-Type', 'text/html');
+        //res.send(new Buffer(ff));
+        res.sendFile(__dirname + '/UI/../../manage_meals.html');
 };
 
 exports.add_meal = function(req, res){
     res.send(
-        'add Meal on constructoin'
+        'add Meal on construction'
         //meals.addMeals(req.body.name);#156846525
     );
 };

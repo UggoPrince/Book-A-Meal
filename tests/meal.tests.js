@@ -56,4 +56,20 @@ describe('api/v1/', function(){
 
         }
     );
+
+    describe( 'DELETE /meals/mealId', function()
+        {
+            it('it should delete a meal option', function()
+                {
+                    meals.delete('/', function(req, res)
+                        {
+                            res.send("meal deleted");
+                        }
+                    );
+        
+                }
+            );
+
+        }
+    );
 });
