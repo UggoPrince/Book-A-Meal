@@ -3,9 +3,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>B.A.M - Manage Meals</title>
-        <link rel="stylesheet" href="ui.css" type="text/css" />
-        <script src="jquery-3.2.1.min.js"></script>
-        <script src="ui.js"></script>
+        <link rel="stylesheet" href="/../ui.scss" type="text/css" />
+        <script src="/../jquery-3.2.1.min.js"></script>
+        <script src="/../ui.js"></script>
+        <script src="/../manage_meals.js"></script>
     </head>
     <body>
         <div class="container">
@@ -14,7 +15,7 @@
             <div class="main-content">
                 <div class="holdForms">
                     <!--add-->
-                    <form action="" method="POST" id="addMealForm" name="addMealForm" class="form manageMealForms">
+                    <form method="POST" enctype='multipart/form-data' id="addMealForm" name="addMealForm" class="form manageMealForms">
                         <p><h4>Add Meal</h4></p>
                         <p>
                             <label for="mealName">Name</label>
@@ -31,7 +32,7 @@
                     </form>
 
                     <!--modify-->
-                    <form action="" method="POST" id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
+                    <form method="POST" enctype='multipart/form-data' id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
                         <p><h4>Modify Meal</h4></p>
                         <p>
                             <label for="selectMeal">Meals</label>
@@ -56,7 +57,7 @@
                 
                 <div class="holdForms">
                     <!--delete-->
-                    <form action="" method="POST" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
+                    <form action="" method="DELETE" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
                         <p><h4>Delete A Meal</h4></p>
                         <p>
                             <label for="selectMeal">Meals</label>

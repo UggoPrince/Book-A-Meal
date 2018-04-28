@@ -26,7 +26,7 @@ class Meals{
     // addMeal method
     addMeal(name, image)
     {
-        if(this.meal.length != 0)
+        if(this.mealDB.length == 0)
         {
             const deMeal = {"mealId":1, "name":name};
             this.mealDB.push(deMeal);

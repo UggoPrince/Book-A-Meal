@@ -1,17 +1,17 @@
 
 // handle the loading of header.html into the header
-var xmlhObj;
-var currentPage;
-var nav1;
-var mobileNavButton;
-var mobileNav;
-var closeMobileNav;
-var mobileNavOpen = false;
-var widthChange;
+let xmlhObj;
+let currentPage;
+let nav1;
+let mobileNavButton;
+let mobileNav;
+let closeMobileNav;
+let mobileNavOpen = false;
+let widthChange;
 
 $(document).ready(function(e) {
-	$('#header').load('header.html');
-	$('#footer').load('footer.html');
+	$('#header').load('/../header.html');
+	$('#footer').load('/../footer.html');
 });
 
 function toggleMobileMenu(e){

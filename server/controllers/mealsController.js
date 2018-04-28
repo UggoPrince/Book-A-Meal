@@ -1,17 +1,18 @@
 import fs from 'fs';
+import path from 'path';
+import express from 'express';
 import meals from '../models/meals';
 
+const app = express();
+
 exports.index = function(req, res){
-        //const ff = "<form>"+
-                    //'<input type="text" /></form>';
-        //res.set('Content-Type', 'text/html');
-        //res.send(new Buffer(ff));
-        res.sendFile(__dirname + '/UI/../../manage_meals.html');
+        res.sendFile(path.join(__dirname, '/../../UI/manage_meals.html'));
 };
 
 exports.add_meal = function(req, res){
     res.send(
-        'add Meal on construction'
+        req.body +
+        ' add Meal on construction'
         //meals.addMeals(req.body.name);#156846525
     );
 };
