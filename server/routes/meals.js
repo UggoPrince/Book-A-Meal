@@ -1,14 +1,19 @@
 import express from 'express';
-import meals from '../controllers/mealsController';
+import url from 'url';
+import multer from 'multer';
+import {index, add_meal, modify_meal, delete_meal} from '../controllers/mealsController';
 
-const router = express();
+const router = express.Router();
+const upload = multer({dest: '/../public'})
 
-router.get('/', meals.index);
+const getm = router.get('/', index);
 
-router.post('/', meals.add_meal);
+//const post = router.post('/', meals.add_meal);
 
-router.put('/mealId', meals.modify_meal);
+const postm = router.post('/', upload.single('mealImage'), add_meal);
 
-router.delete('/mealId', meals.delete_meal);
+const putm = router.put('/mealId', modify_meal);
 
-export default router;
+const delm = router.delete('/mealId', delete_meal);
+
+export {getm, postm, putm, delm};

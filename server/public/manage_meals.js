@@ -1,3 +1,4 @@
+//import {Form, ManageMealForm} from '../models/forms';
 class MealOptions
 {
     constructor()
@@ -78,7 +79,7 @@ class MealOptions
 
 const mealOP = new MealOptions();
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', ()=>{
     mealOP.initProp();
     mealOP.setupMealOptions();
     mealOP.checkMealDBLength();

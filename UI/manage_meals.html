@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/../ui.scss" type="text/css" />
         <script src="/../jquery-3.2.1.min.js"></script>
         <script src="/../ui.js"></script>
+        <script src="/../manage_meal_forms.js"></script>
         <script src="/../manage_meals.js"></script>
     </head>
     <body>
@@ -15,16 +16,20 @@
             <div class="main-content">
                 <div class="holdForms">
                     <!--add-->
-                    <form method="POST" enctype='multipart/form-data' id="addMealForm" name="addMealForm" class="form manageMealForms">
+                    <form action="" method="POST" enctype='multipart/form-data' id="addMealForm" name="addMealForm" class="form manageMealForms">
                         <p><h4>Add Meal</h4></p>
                         <p>
                             <label for="mealName">Name</label>
-                            <input type="text" name="mealName" id="mealName" class="input" />
+                            <input type="text" name="mealName" id="addMealName" class="input" maxlength="30" required />
                         </p>
                         <p>
                             <label for="mealImage">Image</label>
-                            <input type="file" name="mealImage" id="mealImage" />
+                            <input type="file" name="mealImage" id="addMealImage" accept="image/*" />
                         </p>
+                        <p>
+                            <span id="addError"></span>
+                        </p>
+                        <input type="hidden" name="aForm" value="addMealForm" />
 
                         <p class="pButton">
                             <input type="submit" value="Add" />
@@ -32,22 +37,26 @@
                     </form>
 
                     <!--modify-->
-                    <form method="POST" enctype='multipart/form-data' id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
+                    <form action="" method="POST" enctype='multipart/form-data' id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
                         <p><h4>Modify Meal</h4></p>
                         <p>
                             <label for="selectMeal">Meals</label>
-                            <select name="selectMeal" id="selectMeal" class="select">
-                                <option value="select">Select Meal Option..</option>
+                            <select name="selectMeal" id="modifySelectMeal" class="select" >
+                                <option value="select" selected="selected">Select Meal Option..</option>
                             </select>
                         </p>
                         <p>
                             <label for="mealName">Name</label>
-                            <input type="text" name="mealName" id="mealName" class="input" />
+                            <input type="text" name="mealName" id="modifyMealName" class="input" maxlength="30" />
                         </p>
                         <p>
                             <label>Image</label>
-                            <input type="file" name="mealImage" id="mealImage" />
+                            <input type="file" name="mealImage" id="modifyMealImage" accept="image/*" />
                         </p>
+                        <p>
+                            <span id="modifyError"></span>
+                        </p>
+                        <input type="hidden" name="aForm" value="modifyMealForm" />
 
                         <p class="pButton">
                             <input type="submit" value="Modify" />
@@ -57,13 +66,16 @@
                 
                 <div class="holdForms">
                     <!--delete-->
-                    <form action="" method="DELETE" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
+                    <form action="" method="POST" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
                         <p><h4>Delete A Meal</h4></p>
                         <p>
                             <label for="selectMeal">Meals</label>
-                            <select name="selectMeal" id="selectMeal" class="select">
-                                <option value="select">Select Meal Option..</option>
+                            <select name="selectMeal" id="deleteSelectMeal" class="select">
+                                <option value="select" selected="selected">Select Meal Option..</option>
                             </select>
+                        </p>
+                        <p>
+                            <span id="deleteError"></span>
                         </p>
 
                         <p class="pButton">

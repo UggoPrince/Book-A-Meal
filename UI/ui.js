@@ -92,7 +92,7 @@ function loadNav(){
 		document.getElementById('b2').firstChild.innerHTML = "Logout";
 		document.getElementById('b2').style.display = "inline-block";
 	}
-	else if(page == "manage_meals.html" || page == "set_menu.html" || page == "order_history.html")
+	else if(page == "manage_meals.html" || page == "set_menu.html" || page == "order_history.html" || url == "http://localhost:8080/api/v1/meals")
 	{
 		document.getElementById('a1').style.display = "inline-block";
 		document.getElementById('a4').style.display = "inline-block";

@@ -3,30 +3,21 @@
 
 import exception from '../exception';
 
-class Meals{
+export class Meals{
     constructor()
     {
-        initMeal();
+        this.mealDB = null;
     } // end constructor
 
     // create meal database if it doesnt exist
-    initMeal()
-    {
-        if(localStorage.mealOptions)
-        {
-            this.mealDB = JSON.parse(localStorage.mealOptions);
-        }
-        else
-        {
-            this.mealDB = [];
-            localStorage.setItem("mealOptions", JSON.stringify(this.mealDB));
-        }
-    } // end method initMeal
 
     // addMeal method
-    addMeal(name, image)
+    addMeal(req)
     {
-        if(this.mealDB.length == 0)
+        const n = req;
+        alert(req.body);
+        //const i = res;
+        /*if(this.mealDB.length == 0)
         {
             const deMeal = {"mealId":1, "name":name};
             this.mealDB.push(deMeal);
@@ -52,7 +43,7 @@ class Meals{
                 localStorage.mealOptions = JSON.stringify(this.mealDB);
                 //processImage(mealNum, image);
             }
-        }
+        }*/
     } // end method addMeal
 
     //modifyMeal method
@@ -81,5 +72,3 @@ class Meals{
     processImage(id, image = "meal")
     {} // end method processImage
 } // end class Meals
-
-export default Meals;

@@ -2,24 +2,36 @@ class Form
 {
     constructor()
     {
-        
+        this.form = '';
     } // end constructor
+
+    set setForm(e)
+    {
+        this.form = e.target;
+    } // end method setForm
+
+    get getForm()
+    {
+        return this.form;
+    } // end method getForm
 } // end class form
 
 class SignupForm extends Form
 {
     constructor()
     {
-        this.firstName = '';
+        /*this.firstName = '';
         this.lastName = '';
         this.email = '';
         this.phoneNum = '';
         this.username = '';
         this.password = '';
-        this.confirmPassword = '';
+        this.confirmPassword = '';*/
     } // end constructor
 
-    submitForm(){} // end method submit form 
+    submitForm()
+    {
+    } // end method submit form 
 } // 
 
 class SigninForm extends Form
@@ -33,18 +45,6 @@ class SigninForm extends Form
     submitForm(){} // end method submitForm
 } // end class SigninForm
 
-class ManageMealForm extends Form
-{
-    constructor()
-    {
-        this.id = '';
-        this.lastName = '';
-        this.email = '';
-        this.phoneNum = '';
-        this.username = '';
-        this.password = '';
-        this.confirmPassword = '';
-    } // end constructor
-} // end class ManageMealForm
+
 class SetMenuForm extends Form{} //
 class OrderForm extends Form{} //
