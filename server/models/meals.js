@@ -52,7 +52,7 @@ export class Meals{
         if(name)
         {
             this.mealDB[id].name = name;
-            localStorage.mealOptions = JSON.stringify(this.mealDB);
+            //localStorage.mealOptions = JSON.stringify(this.mealDB);
         }
         if(image)
         {
@@ -65,7 +65,7 @@ export class Meals{
     deleteMeal(id, name)
     {
         this.mealDB[id].splice(id, 1);
-        localStorage.mealOptions = JSON.stringify(this.mealDB);
+        //localStorage.mealOptions = JSON.stringify(this.mealDB);
         //processImage(id);
     } // end method deleteMeal
 

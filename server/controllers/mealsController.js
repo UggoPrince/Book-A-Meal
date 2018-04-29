@@ -8,7 +8,7 @@ import {Meals} from '../models/meals.js';
 
 const app = express();
 
-const store = localStorage.getItem("mealOptions");
+//const store = localStorage.getItem("mealOptions");
 const meal = new Meals();
 
 app.use(express.static(path.join(__dirname, '/server/public')));
