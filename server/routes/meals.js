@@ -12,8 +12,8 @@ const getm = router.get('/', index);
 
 const postm = router.post('/', upload.single('mealImage'), add_meal);
 
-const putm = router.put('/mealId', modify_meal);
+const putm = router.put('/:mealId', modify_meal);
 
-const delm = router.delete('/mealId', delete_meal);
+const delm = router.delete('/:mealId', delete_meal);
 
 export {getm, postm, putm, delm};

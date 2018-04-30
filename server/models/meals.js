@@ -1,6 +1,6 @@
 // this class holds all meal options
 // it is a kind of a database to all options
-
+import multer from 'multer';
 import exception from '../exception';
 
 export class Meals{
@@ -12,10 +12,10 @@ export class Meals{
     // create meal database if it doesnt exist
 
     // addMeal method
-    addMeal(req)
+    addMeal(req, res)
     {
         const n = req;
-        alert(req.body);
+        res.send(res.body);
         //const i = res;
         /*if(this.mealDB.length == 0)
         {
