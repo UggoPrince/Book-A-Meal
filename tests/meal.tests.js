@@ -1,20 +1,16 @@
 import assert from 'assert';
 import express from 'express';
-import app from "../app.js";
-import meals from '../server/routes/meals';
-/*import chai from 'chai';
-import chaiHttp from 'chai-http';
+import app from "../server.js";
+import {getm, postm, putm, delm} from '../server/routes/meals';
 
-chai.use(chaiHttp);
-chai.should();*/
 
-describe('api/v1/', function(){
+describe('api/v1/', () => {
 
-    describe( 'GET /meals', function()
+    describe( 'GET /meals', () =>
         {
-            it('it should get all meal options', function()
+            it('it should get all meal options', () =>
                 {
-                    meals.get('/', function(req, res)
+                    getm.get('/', (req, res) =>
                         {
                             res.send("here i am ");
                         }
@@ -25,11 +21,11 @@ describe('api/v1/', function(){
         }
     );
 
-    describe( 'POST /meals', function()
+    describe( 'POST /meals', () =>
         {
-            it('it should add a meal into the meal options', function()
+            it('it should add a meal into the meal options', () =>
                 {
-                    meals.post('/', function(req, res)
+                    postm.post('/', (req, res) =>
                         {
                             res.send("meal added");
                         }
@@ -41,11 +37,11 @@ describe('api/v1/', function(){
         }
     );
 
-    describe( 'PUT /meals/mealId', function()
+    describe( 'PUT /meals/:mealId', () =>
         {
-            it('it should update a meal option', function()
+            it('it should update a meal option', () =>
                 {
-                    meals.put('/', function(req, res)
+                    putm.put('/', (req, res) =>
                         {
                             res.send("meal added");
                         }
@@ -57,11 +53,11 @@ describe('api/v1/', function(){
         }
     );
 
-    describe( 'DELETE /meals/mealId', function()
+    describe( 'DELETE /meals/:mealId', () =>
         {
-            it('it should delete a meal option', function()
+            it('it should delete a meal option', () =>
                 {
-                    meals.delete('/', function(req, res)
+                    delm.delete('/', (req, res) =>
                         {
                             res.send("meal deleted");
                         }

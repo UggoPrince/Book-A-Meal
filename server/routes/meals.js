@@ -6,9 +6,7 @@ const router = express.Router();
 
 const getm = router.get('/', index);
 
-//const post = router.post('/', meals.add_meal);
-
-const postm = router.post('/', upload.single('mealImage'), add_meal);
+const postm = router.post('/', add_meal);
 
 const putm = router.put('/:mealId', modify_meal);
 
