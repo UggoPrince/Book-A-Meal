@@ -37,8 +37,6 @@ const mealsDB = [
                     },
                 ];
 
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: false }));
 
 const index = (req, res) => {
         let md = "All MEALS" + '</br>';
