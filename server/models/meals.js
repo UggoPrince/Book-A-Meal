@@ -16,34 +16,6 @@ export class Meals{
     {
         const n = req;
         res.send(res.body);
-        //const i = res;
-        /*if(this.mealDB.length == 0)
-        {
-            const deMeal = {"mealId":1, "name":name};
-            this.mealDB.push(deMeal);
-            localStorage.mealOptions = JSON.stringify(this.mealDB);
-            //processImage( 1, image);
-        }
-        else
-        {
-            let mealNum = this.mealDB.length; // total meal options
-            let nameExist = false;
-            for( let i = 0; i < mealNum; i++ )
-            {
-                if(this.mealDB[i].name == name) nameExist = true;
-            } // end for
-
-            if(nameExist) exception.displayMessage("A meal with the name ${name}" + 
-                + "already exist in database");
-            else
-            {
-                ++mealNum;
-                const deMeal = {"mealId":mealNum, "name":name};
-                this.mealDB.push(deMeal);
-                localStorage.mealOptions = JSON.stringify(this.mealDB);
-                //processImage(mealNum, image);
-            }
-        }*/
     } // end method addMeal
 
     //modifyMeal method
