@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Book.A.Meal - Signup</title>
+        <title>Book.A.Meal - Caterer Sing up</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
@@ -12,53 +12,60 @@
             <header id="header">
                 <script>
                     document.addEventListener('DOMContentLoaded', ()=>{
-                        getPage("headerSignup.html", "header");
+                        getPage("catererHeaderSignup.html", "header");
                         getPage("footer.html", "footer");
                     });
                 </script>
             </header>
+            <div class="content">
             <div class="main-content2">
                 <form method="POST" action="" name="signupForm" id="signupForm" class="form signingForms">
-                    <p>User Sign Up</p>
+                    <p>Caterer Sign Up</p>
                     <p>
                     <label for="firstname">Firstname</label>
-                    <input type="text" name="firstname" id="firstname" class="input" />
+                    <input type="text" name="firstname" id="firstname" class="input" required />
                     </p>
 
                     <p>
                         <label for="lastname">Lastname</label>
-                        <input type="text" name="latstname" id="lastname" class="input" />
+                        <input type="text" name="latstname" id="lastname" class="input" required />
                     </p>
 
                     <p>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="input" />
+                        <input type="email" name="email" id="email" class="input" required />
                     </p>
 
                     <p>
                         <label for="phone">Phone Number</label>
-                        <input type="phone" name="phone" id="phone" maxlength="11" class="input" />
+                        <input type="phone" name="phone" id="phone" maxlength="11" class="input" required />
+                    </p>
+
+                    <p>
+                        <label for="cataddress">Address</label>
+                        <input type="text" name="cataddress" id="cataddress" maxlength="11" class="input" required />
                     </p>
 
                     <p>
                         <label for="username">Username</label>
-                        <input type="text" name="username" id="username" class="input" />
+                        <input type="text" name="username" id="username" class="input" required />
                     </p>
 
                     <p>
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="input" />
+                        <input type="password" name="password" id="password" class="input" required />
                     </p>
 
                     <p>
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" class="input" />
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="input" required />
                     </p>
 
                     <p class="pButton">
                         <input type="submit" value="Signup" class="submitButton" />
                     </p>
                 </form>
+            </div>
             </div>
             <footer id="footer">
             </footer>

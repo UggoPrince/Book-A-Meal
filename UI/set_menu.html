@@ -2,15 +2,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>B.A.M - Set Menu</title>
+        <title>Book.A.Meal - Set Menu</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
     </head>
     <body>
+            <script>
+                    document.addEventListener('DOMContentLoaded', ()=>{
+                        getPage("headerCaterer.html", "header");
+                        getPage("footer.html", "footer");
+                    });
+            </script>
         <header id="header">
         </header>
-        <div class="main-content">
+        <div class="main-content3">
             <form action="" method="POST" id="setMenuForm" name="setMenuForm" class="form ">
                 <p><h4>Set Menu For a Specific Day</h4></p>
                 <p id="setmenu_p2">Note: IF the date box is empty, kindly update your browser.</p>

@@ -2,12 +2,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>B.A.M Order History</title>
+        <title>Book.A.Meal Order History</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
     </head>
     <body>
+            <script>
+                    document.addEventListener('DOMContentLoaded', ()=>{
+                        getPage("headerCaterer.html", "header");
+                        getPage("footer.html", "footer");
+                        loadBookedMeals();
+                    });
+            </script>
         <header id="header">
         </header>
         <div class="main-content">

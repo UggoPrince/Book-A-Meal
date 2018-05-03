@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Book.A.Meal - Caterer Sign in</title>
+        <link rel="stylesheet" href="ui.css" type="text/css" />
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="ui.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <script>
+                    document.addEventListener('DOMContentLoaded', ()=>{
+                        getPage("catererHeaderSignin.html", "header");
+                        getPage("footer.html", "footer");
+                    });
+                </script>
+            </header>
+            <div class="content">
+            <div class="main-content2">
+                    <form method="POST" action="" name="signinForm" id="signinForm" class="form signingForms">
+                        <p>Caterer Sign In</p>
+                            <p>
+                                <label for="username">Username/Email</label>
+                                <input type="text" name="username" id="username" class="input" />
+                            </p>
+        
+                            <p>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="input" />
+                            </p>
+        
+                            <p class="pButton">
+                                <input type="submit" value="SignIn" class="submitButton" />
+                            </p>
+                        </form>
+            </div>
+            </div>
+            <footer id="footer">
+            </footer>
+        </div>
+    </body>
+</html>

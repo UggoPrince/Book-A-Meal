@@ -2,75 +2,109 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>B.A.M - Manage Meals</title>
+        <title>Book.A.Meal - Manage Meals</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
     </head>
     <body>
-        <header id="header">
-        </header>
-        <div class="main-content">
-            <div class="holdForms">
-                <!--add-->
-                <form action="" method="POST" id="addMealForm" name="addMealForm" class="form manageMealForms">
-                    <p><h4>Add Meal</h4></p>
-                    <p>
-                        <label for="mealName">Name</label>
-                        <input type="text" name="mealName" id="mealName" class="input" />
-                    </p>
-                    <p>
-                        <label for="mealImage">Image</label>
-                        <input type="file" name="mealImage" id="mealImage" />
-                    </p>
+        <script>
+                document.addEventListener('DOMContentLoaded', ()=>{
+                    getPage("headerCaterer.html", "header");
+                    getPage("footer.html", "footer");
+                    loadBookedMeals();
+                });
+        </script>
+        <div class="container">
+            <header id="header">
+            </header>
+            <div class="content">
+                <div class="main-content">
+                    <div class="bar">
+                        <a id="mmCreateForm1">Add Meal</a> <!--mm stands for manage_meal-->
+                        <a id="mmCreateForm2">Modify Meal</a>
+                        <a id="mmCreateForm3">Delete Meal</a>
+                        <script>
+                        document.getElementById('mmCreateForm1').addEventListener(
+                            'click', () => { hide_A_ManageForm("addMealForm", "modifyMealForm", "deleteMealForm");}
+                        );
 
-                    <p class="pButton">
-                        <input type="submit" value="Add" />
-                    </p>
-                </form>
+                        document.getElementById('mmCreateForm2').addEventListener(
+                            'click', () => { hide_A_ManageForm("modifyMealForm", "addMealForm", "deleteMealForm");}
+                        );
 
-                <!--modify-->
-                <form action="" method="POST" id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
-                    <p><h4>Modify Meal</h4></p>
-                    <p>
-                        <label for="selectMeal">Meals</label>
-                        <select name="selectMeal" id="selectMeal" class="select">
-                            <option value="select">Select Meal Option..</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="mealName">Name</label>
-                        <input type="text" name="mealName" id="mealName" class="input" />
-                    </p>
-                    <p>
-                        <label>Image</label>
-                        <input type="file" name="mealImage" id="mealImage" />
-                    </p>
+                        document.getElementById('mmCreateForm3').addEventListener(
+                            'click', () => { hide_A_ManageForm("deleteMealForm", "addMealForm", "modifyMealForm");}
+                        );
+                        </script>
+                    </div>
+                    <div class="holdForms">
+                        <!--add-->
+                        <form action="" method="POST" id="addMealForm" name="addMealForm" class="form manageMealForms">
+                            <p><h4>Add Meal</h4></p>
+                            <p>
+                                <label for="mealName">Name</label>
+                                <input type="text" name="mealName" id="mealName" class="input" />
+                            </p>
+                            <p>
+                                <label for="mealImage">Image</label>
+                                <input type="file" name="mealImage" id="mealImage" />
+                            </p>
 
-                    <p class="pButton">
-                        <input type="submit" value="Modify" />
-                    </p>
-                </form>
+                            <p class="pButton">
+                                <input type="submit" value="Add" />
+                            </p>
+                        </form>
+
+                        <!--modify-->
+                        <form action="" method="POST" id="modifyMealForm" name="modifyMealForm" class="form manageMealForms">
+                            <p><h4>Modify Meal</h4></p>
+                            <p>
+                                <label for="selectMeal">Meals</label>
+                                <select name="selectMeal" id="selectMeal" class="select">
+                                    <option value="select">Select Meal Option..</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="mealName">Name</label>
+                                <input type="text" name="mealName" id="mealName" class="input" />
+                            </p>
+                            <p>
+                                <label>Image</label>
+                                <input type="file" name="mealImage" id="mealImage" />
+                            </p>
+
+                            <p class="pButton">
+                                <input type="submit" value="Modify" />
+                            </p>
+                        </form>
+                    <!--</div>-->
+                    
+                    <!--<div class="holdForms">-->
+                        <!--delete-->
+                        <form action="" method="POST" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
+                            <p><h4>Delete A Meal</h4></p>
+                            <p>
+                                <label for="selectMeal">Meals</label>
+                                <select name="selectMeal" id="selectMeal" class="select">
+                                    <option value="select">Select Meal Option..</option>
+                                </select>
+                            </p>
+
+                            <p class="pButton">
+                                <input type="submit" value="Delete" />
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="sideContent inline-block">
+                        <p>&nbsp;</p>
+                        <p style="padding-left: 10px;">Recently Booked Meals</p>
+                        <div id="innerSideDiv2" ></div>
+                </div>
             </div>
-            
-            <div class="holdForms">
-                <!--delete-->
-                <form action="" method="POST" id="deleteMealForm" name="deleteMealForm" class="form manageMealForms">
-                    <p><h4>Delete A Meal</h4></p>
-                    <p>
-                        <label for="selectMeal">Meals</label>
-                        <select name="selectMeal" id="selectMeal" class="select">
-                            <option value="select">Select Meal Option..</option>
-                        </select>
-                    </p>
-
-                    <p class="pButton">
-                        <input type="submit" value="Delete" />
-                    </p>
-                </form>
-            </div>
+            <footer id="footer">
+            </footer>
         </div>
-        <footer id="footer">
-        </footer>
     </body>
 </html>

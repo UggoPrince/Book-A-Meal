@@ -2,32 +2,41 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>B.A.M - Signin</title>
+        <title>Book.A.Meal - Signin</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
     </head>
     <body>
-        <header id="header">
-        </header>
-        <div class="main-content">
-            <form method="POST" action="" name="signinForm" id="signinForm" class="form signingForms">
-                <p>
-                    <label for="username">Username/Email</label>
-                    <input type="text" name="username" id="username" class="input" />
-                </p>
+             <script>
+                document.addEventListener('DOMContentLoaded', ()=>{
+                    getPage("headerSignin.html", "header");
+                    getPage("footer.html", "footer");
+                });
+            </script>
+        <div class="container">
+            <header id="header">
+            </header>
+            <div class="main-content2">
+                <form method="POST" action="" name="signinForm" id="signinForm" class="form signingForms">
+                    <p>User Sign In</p>
+                    <p>
+                        <label for="username">Username/Email</label>
+                        <input type="text" name="username" id="username" class="input" />
+                    </p>
 
-                <p>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" class="input" />
-                </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="input" />
+                    </p>
 
-                <p class="pButton">
-                    <input type="submit" value="SignIn" class="submitButton" />
-                </p>
-            </form>
+                    <p class="pButton">
+                        <input type="submit" value="SignIn" class="submitButton" />
+                    </p>
+                </form>
+            </div>
+            <footer id="footer">
+            </footer>
         </div>
-        <footer id="footer">
-        </footer>
     </body>
 </html>

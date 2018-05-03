@@ -1,28 +1,38 @@
 body{
-    max-width:70em;
-    width:100%;
     margin: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    /*max-width: 82em;*/
+    width: 100%;
+    margin: auto;
     box-shadow: 0px 0px 8px #CCC;
 }
 
 .header{
     width: 100%;
-    min-height: 250px;
-    background-color: skyblue;
-	background-image:url(image/test9.jpg);
+    min-height: 200px;
+    background-color: tomato;
+	background-image:url(image/header6.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 	background-position:center;
     position: relative;
+    /*box-shadow: -1px -2px 20px #FFF inset;*/
 }
 
 .headerTop{
     width: 100%;
-    height: 210px;
+    min-height: 27px;
+    padding: 10px 0px 10px 0px;
+    background-color: tomato;
+    background: linear-gradient( 150deg, tomato, tomato, tomato, tomato, maroon, maroon);
     display: block;
+    position: relative;
 }
 
-.headerTop span{
+#mobileNavButton{
     cursor: pointer;
     position: relative;
     padding: 5px 10px;
@@ -31,38 +41,75 @@ body{
 
 .headerBottom{
     width: 100%;
-    height: 37px;
+    height: 200px;
     display: block;
-	position:absolute;
-    top: 90%;
-    background-image: url(image/nav.png);
+    background-image: url(image/nav4.png);
+    background-position: center;
+    opacity: 1.0px;
+}
+
+.headerBottom span:first-child{
+    font-size: 40px;
+    padding: 30px 3px 0px 3px;
+    display: block;
+    color: white;
+}
+
+.headerBottom span:nth-of-type(2){
+    font-size: 30px;
+    padding: 0px 5px 0px 5px;
+    display: block;
+    color: white;
+}
+
+div.headerBottom{
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
 /*this section is for navigation*/
 .nav{
-    width: 100%;
+    width: auto;
     height: inherit;
-    display: block;
-    background-image: url(image/nav.png);
+    /*background-image: url(image/nav.png);*/
     text-align: center;
 }
 
-#nav1 a{
-    width: 150px;
-    padding: 10px 0px;
-    font-size: 14px;
-    display: none;
-    background-image: url(image/nav.png);
-    text-decoration: none;
-    background-color: #DDD;
+.right{
+    margin-right: 30px;
+    float: right;
+}
+
+#nav1{
+    display: inline-block;
+    margin-top: 9px;
+    vertical-align: text-bottom;
+}
+
+.bam{
     color: white;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#nav1 a{
+    width: 100px;
+    padding: 5px 5px;
+    font-size: 14px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background-color: #FFF;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 #nav1 a:hover{
-    background-color:white;
-    background-image: url(image/buttonbg.png);
-    color: 3B5998;
+    background-color: rgb(101, 174, 243);/*#0084FF;*/
+    color: white;
+    /*color: #3B5998;*/
 }
 
 #nav2{
@@ -92,15 +139,323 @@ body{
 #nav2 a:active, a:hover{
     background-color: skyblue;
 }
-/*end styling for navigation*/
 
-.main-content{
-    width: inherit;
-    min-height: 500px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+.bar{
+    width: 100%;
+    display: inline-block;
+    padding: 18px 0px 18px 0px;
+    text-align: center;
+    background-color: #EEE;
 }
 
+.bar a{
+    width: 100px;
+    padding: 5px 5px;
+    color: #000;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.bar a:hover{
+    color: #FFF;
+    background-color: rgb(15, 79, 139);
+}
+
+.bar2{
+    width: 100%;
+    display: none;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    background-color: #CCC;
+}
+
+.bar3{
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0px 10px 0px;
+    text-align: right;
+}
+
+.bar3 input:nth-of-type(2){
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.bar4{
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    background-color: #DDD;
+}
+
+.bar4 a{
+    width: 100px;
+    padding: 5px 5px;
+    color: #000;
+    display: inline-block;
+    background-color: #FFF;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.bar4 a:hover{
+    color: #FFF;
+    background-color: rgb(15, 79, 139);
+}
+
+.blueLinks{
+    width: 100px;
+    padding: 5px 5px;
+    font-size: 14px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background-color: #FFF;
+    cursor: pointer;
+    border: 0px solid #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #333;
+}
+
+.blueLinks:hover{
+    color: #FFF;
+    background-color: rgb(15, 79, 139);
+}
+
+/*end styling for navigation*/
+
+.content{
+    width: 100%;
+    min-height: 500px;
+    padding-bottom: 40px;
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+
+.width100{
+    width: 100%;
+}
+
+.main-content2{
+    width: 100%;
+    min-height: 500px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main_content_menu{
+    max-width: 44.5em;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+}
+
+.sideContent1{
+    max-width: 17em;
+    width: 100%;
+    min-height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+#myCatererSide p{
+    font-size: 15px;
+    border-radius: 1px;
+    background-color: #ddd;
+}
+
+.main-content{
+    max-width: 62em;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-content3{
+    width: 100%;
+    min-height: 500px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sideContent{
+    max-width: 22em;
+    width: 100%;
+    min-height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 10px;
+    background-color: #FFF;
+    margin: auto;
+}
+
+#indexMenu{
+    max-width: 60em;
+    width:100%;
+    margin-top: 30px;
+    text-align: center;
+    width:100%;
+    display: inline-block;
+}
+
+.centerDiv{
+    text-align: center;
+}
+
+.catBlock{
+    width:100%;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.catBlock img{
+    display: inline-block;
+    width: 60px;
+    height: 45px;
+
+}
+
+.catBlock span{
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+    text-align: left;
+    display: block;
+}
+
+.catBlock input{
+    border: 1px solid #0084FF;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    float: left;
+    border-radius: 2px;
+}
+
+.catBlock input:hover{
+    color: #FFF;
+    border-color: rgb(15, 79, 139);
+    background-color: rgb(15, 79, 139);
+}
+
+.catBlock div{
+    width: 180px;
+    vertical-align:top;
+    padding-left: 5px;
+    display: inline-block;
+}
+
+.foodBlock{
+    width:202px;
+    display: inline-block;
+    text-align: center;
+    margin:auto 15px 30px 15px;
+
+}
+
+.foodBlock img{
+    width:202px;
+    height: 150px;
+}
+
+.foodBlock input[type="button"]{
+    width: 100px;
+    padding: 5px 5px;
+    font-size: 14px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background-color: #FFF;
+    cursor: pointer;
+    border: 1px solid #0084FF;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.foodBlock input[type="button"]:hover{
+    color: #FFF;
+    background-color: tomato;
+    border-color: tomato;
+}
+
+.foodBlock input[type="date"]{
+    margin-top: 2px;
+    border: 1px solid #555;
+    border-radius: 2px;
+}
+
+.foodBlock span{
+    margin-bottom: 3px;
+}
+
+.itemBlock{
+    width:202px;
+    display: inline-block;
+    text-align: center;
+    margin:auto 15px 50px 15px;
+
+}
+
+.itemBlock img{
+    width:202px;
+    height: 150px;
+}
+
+
+
+.foodNameSpan{
+    margin-top: 5px;
+    text-align: left;
+    font-size: 15px;
+    width: 200px;
+}
+
+.foodPriceSpan{
+    text-align: left;
+    width: 200px;
+    font-size: 14px;
+}
+
+.foodBlock span{
+    display: block;
+    text-align: left;
+}
+
+.itemBlock span{
+    display: block;
+    text-align: left;
+}
+
+#innerSideDiv{
+    display: inline-block;
+    width: 99%;
+}
+
+#innerSideDiv2{
+    display: inline-block;
+    width: auto;
+    padding-left: 10px;
+}
 
 /* this section is for the forms*/
 .holdForms{
@@ -113,10 +468,10 @@ body{
     margin-top: 0px;
 }
 
-#signupForm{  
+#signupFormCat{
+    display: none;
 }
-#signinForm{
-}
+
 #addMealForm{
     max-width: 25em;
     margin: 30px auto 0px auto;
@@ -177,8 +532,6 @@ body{
     vertical-align: top;
 }
 
-#menuForm p{
-}
 
 .showCase p{
     text-align: left;
@@ -213,7 +566,8 @@ body{
 }
 
 .pSetMenu{
-    font-size: 18px;
+    max-width: 20em;
+    font-size: 15px;
 }
 
 .pSetMenu:hover{
@@ -261,7 +615,6 @@ body{
     border-radius: 3px;
 }
 
-#orderControls input[type="button"]{}
 
 #orderData{
     max-width: 65em;
@@ -289,8 +642,19 @@ body{
 .manageMealForms{
     text-align: left;
     vertical-align: top;
-    display: inline-block;
     margin: 30px auto 0px auto;
+}
+
+#addMealForm{
+    display: inline-block;
+}
+
+#modifyMealForm{
+    display: none
+}
+
+#deleteMealForm{
+    display: none;
 }
 
 .manageMealForms h4{
@@ -375,7 +739,7 @@ body{
 #footer{
     width: 100%;
     height: 200px;
-    background-color: #222;
+    background-color: #555;
 }
 /*end styling for forms*/
 
