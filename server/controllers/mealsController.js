@@ -8,12 +8,6 @@ import {Meals} from '../models/meals.js';
 
 const app = express();
 
-//const store = localStorage.getItem("mealOptions");
-const meal = new Meals();
-
-app.use(express.static(path.join(__dirname, '/server/public')));
-app.use(express.static(path.join(__dirname, '/UI')));
-
 const mealsDB = [
                     {
                         'id': '1',
@@ -37,21 +31,15 @@ const mealsDB = [
                     },
                 ];
 
+const meal = new Meals(mealsDB);
 
 const index = (req, res) => {
-        let md = "All MEALS" + '</br>';
-        for( let i = 0; i < mealsDB.length; i++){
-            md += mealsDB[i].id + " : " + mealsDB[i].name + '</br>';
-        }
-        res.send(md);
-        //res.sendFile(path.join(__dirname, '../../UI/manage_meals.html'));
+        meal.getMeals(req, res);
 };
 
 const add_meal = (req, res)=>{
-        res.send(
-            'Your Meal Was Successfully Added'
+        meal.addMeal(req, res);
             //#156846525
-        );
     };
 
 const modify_meal = (req, res) => {

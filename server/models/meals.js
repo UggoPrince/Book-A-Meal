@@ -4,41 +4,33 @@ import multer from 'multer';
 import exception from '../exception';
 
 export class Meals{
-    constructor()
+    constructor(deMeals)
     {
-        this.mealDB = null;
+        this.meals = deMeals;
+        //this.image;
     } // end constructor
 
-    // create meal database if it doesnt exist
+    getMeals(req, res)
+    {
+        res.json(this.meals);
+    } // end method getMeals
 
     // addMeal method
     addMeal(req, res)
     {
-        const n = req;
-        res.send(res.body);
+        res.json({"success":"Meal Success fully added"});
     } // end method addMeal
 
     //modifyMeal method
     modifyMeal(id, name, image )
     {
-        if(name)
-        {
-            this.mealDB[id].name = name;
-            //localStorage.mealOptions = JSON.stringify(this.mealDB);
-        }
-        if(image)
-        {
-            ++id;
-            //processImage(id, image);
-        }
+
     } // end method modifyMeal
 
     // deleteMeal method
     deleteMeal(id, name)
     {
-        this.mealDB[id].splice(id, 1);
-        //localStorage.mealOptions = JSON.stringify(this.mealDB);
-        //processImage(id);
+        
     } // end method deleteMeal
 
     processImage(id, image = "meal")
