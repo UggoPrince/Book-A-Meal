@@ -43,19 +43,11 @@ const add_meal = (req, res)=>{
     };
 
 const modify_meal = (req, res) => {
-    let c = req.params.mealId;
-    let m = "The meal doesn't exist. Add it as a meal option";
-    if(mealsDB[c-1])
-        m = "Your meal "  + "<strong>" + mealsDB[c-1].name + "</strong>" + " was successfully UPDATED";
-    res.send( m );
+    meal.modifyMeal(req, res);
 };
 
 const delete_meal = (req, res) => {
-    let c = req.params.mealId;
-    let m = "The meal doesn't exist. Add it as a meal option";
-    if(mealsDB[c-1])
-        m = "Your meal " + "<strong>" +  mealsDB[c-1].name + "</strong>" + " was successfully DELETED";
-    res.send( m );
+    meal.deleteMeal(req, res);
 };
 
 export {index, add_meal, modify_meal, delete_meal};

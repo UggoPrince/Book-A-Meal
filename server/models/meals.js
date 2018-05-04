@@ -7,6 +7,8 @@ export class Meals{
     constructor(deMeals)
     {
         this.meals = deMeals;
+        this.id;
+        this.name;
         //this.image;
     } // end constructor
 
@@ -22,17 +24,20 @@ export class Meals{
     } // end method addMeal
 
     //modifyMeal method
-    modifyMeal(id, name, image )
+    modifyMeal(req, res)
     {
-
+        if(this.meals[req.params.mealId - 1])
+            res.json(this.meals[req.params.mealId -1].name + " was successfully Updated");
+        else
+            res.json("Meal with such id doesnt exist in database. Add it as a meal option");
     } // end method modifyMeal
 
     // deleteMeal method
-    deleteMeal(id, name)
+    deleteMeal(req, res)
     {
-        
+        if(this.meals[req.params.mealId - 1])
+            res.json(this.meals[req.params.mealId -1].name + " was successfully deleted");
+        else
+            res.json("Meal with such id doesnt exist in database. Add it as a meal option");
     } // end method deleteMeal
-
-    processImage(id, image = "meal")
-    {} // end method processImage
 } // end class Meals
