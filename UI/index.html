@@ -10,8 +10,10 @@
     </head>
     <body>
         <script>
+            $(document).ready(function(e) {
+		    $('header').load("indexHeader.html");});
             document.addEventListener('DOMContentLoaded', ()=>{
-                getPage("indexHeader.html", "header");
+                //getPage("indexHeader.html", "header");
                 getPage("footer.html", "footer");
                 menuForIndex();
                 regILinks();
