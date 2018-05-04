@@ -1,6 +1,6 @@
 import express from 'express';
 import url from 'url';
-import {index, add_meal, modify_meal, delete_meal} from '../controllers/mealsController';
+import {index, add_meal, modify_meal, delete_meal} from '../controller/mealsController';
 
 const router = express.Router();
 
