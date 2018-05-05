@@ -813,8 +813,20 @@ div.headerBottom{
 
 #footer{
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     background-color: #555;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+#footer h3{
+    color: #FFF;
+    margin-left: 20px;
+}
+
+#footer p{
+    color: #FFF;
+    margin-left: 20px;
 }
 /*end styling for forms*/
 
