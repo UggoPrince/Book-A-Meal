@@ -367,6 +367,72 @@ function loadMenu(){
 	}
 }
 
+let myPresentCat = 0;
+let myCountOrders = 0;
+
+function loadMyOrders(){
+	let menuDiv = document.getElementById('myorders');
+	let j = myPresentCat;
+	let k = 0;
+	if( myPresentCat < menuBank.length)
+	{
+		let holder = '<p><strong>My Orders</strong></p>';
+		let aDiv = document.createElement('div');
+		for(let i = myCountOrders; i < 2; i++)
+		{
+			let item = "item" + (i + 1);
+			let br = document.createElement('br');
+
+			if(k == 4) aDiv.appendChild(br);
+
+			let div = document.createElement("form");
+			let catId = catererBank
+			div.setAttribute('name', (j+1));
+			div.className = "foodBlock";
+
+			let bookday = document.createElement('span');
+			bookday.innerHTML = "Booked on dd/mm/yyyy";
+			bookday.style.fontSize = "14px";
+
+			let img = document.createElement("img");
+			img.src = "image/" + menuBank[j].menu[item].image;
+
+			let name = document.createElement('span');
+			name.innerHTML = menuBank[j].menu[item].name;
+			name.className = "foodNameSpan";
+			
+			let price = document.createElement('span');
+			price.innerHTML = "Price: "+ menuBank[j].menu[item].price;
+			price.className = "foodPriceSpan";
+
+			let button = document.createElement('input');
+			button.setAttribute('type', 'button');
+			button.setAttribute('value', 'Rebook')
+
+			let dSpan = document.createElement('span');
+
+			div.appendChild(bookday);
+			div.appendChild(img);
+			
+			div.appendChild(name);
+			div.appendChild(price);
+			dSpan.innerHTML = "Change Day " + '<input type="date"/>';
+			dSpan.style.fontSize = '14px';
+			div.appendChild(dSpan);
+			div.appendChild(button);
+
+			aDiv.appendChild(div);
+			//alert('yes')
+			++k;
+			++presentSide;
+		}
+		++countMenu;
+		//let date = '<input type="date" />'
+		menuDiv.innerHTML = holder;
+		menuDiv.appendChild(aDiv);
+	}
+} // end function loadOrders
+
 function regILinks(){
 	document.getElementById('preLink').addEventListener('click', callMenuForIndex);
 	document.getElementById('nextLink').addEventListener('click', callMenuForIndex);
@@ -441,6 +507,45 @@ function loadLatestCaterer(){
 		holder.appendChild(div);
 	}
 	document.getElementById('newCatererNotice').appendChild(holder);
+}
+
+function loadMyCaterers(){
+	let count = 3;
+	let holder = document.createElement('div');
+	holder.style.display = "inline-block";
+	holder.style.width = "99%";
+	for(let i = 0; i < count; i++)
+	{
+		let div = document.createElement('div');
+		div.className = "caterersBlock";
+
+
+		let img = document.createElement('img');
+		img.src = "image/" + catererBank[i].image;
+
+		let bisname = document.createElement('span');
+		bisname.innerHTML = catererBank[i].bisname;
+
+		let locate = document.createElement('span');
+		locate.innerHTML = "location: " + catererBank[i].location;
+
+		let input = document.createElement('input');
+		input.setAttribute('type', 'button');
+		input.setAttribute('name', catererBank[i].id);
+		input.setAttribute('value', 'Unfollow');
+
+		let textDiv = document.createElement('div');
+
+		textDiv.appendChild(bisname);
+		textDiv.appendChild(locate);
+		textDiv.appendChild(input);
+
+		div.appendChild(img);
+		div.appendChild(textDiv);
+		holder.appendChild(div);
+	}
+	document.getElementById('mycaterers').innerHTML = "<p><strong>My Caterers</strong></p>"
+	document.getElementById('mycaterers').appendChild(holder);
 }
 
 function loadSomeCaterers(){

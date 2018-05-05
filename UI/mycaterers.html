@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Book.A.Meal - Menu</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <title>Book.A.Meal - Caterers</title>
         <link rel="stylesheet" href="ui.css" type="text/css" />
         <script src="jquery-3.2.1.min.js"></script>
         <script src="ui.js"></script>
@@ -12,8 +11,8 @@
             <script>
                     document.addEventListener('DOMContentLoaded', ()=>{
                         getPage("headerUser.html", "header");
-                        loadLatestCaterer();
-                        loadMenu();
+                        //loadLatestCaterer();
+                        loadMyCaterers();
                         regMLinks();
                         getPage("footer.html", "footer");
                         loadSomeCaterers();
@@ -22,24 +21,24 @@
         <header id="header">
         </header>
         <div class="content centerDiv">
-            <div class="sideContent1" id="myCatererSide">
+            <!--<div class="sideContent1" id="myCatererSide">
                 <p>Caterer Notifications</p>
                 <div id="newCatererNotice">
 
                 </div>
-            </div>
-            <div class="main_content_menu">
+            </div>-->
+            <div class="my_orders_content">
                 <div class="bar3">
-                    <!--<span>Search Menu</span>--> <input type="search" placeholder="search menu" size="40" /><input type="button" value="search"/>
+                    <!--<span>Search Menu</span>--> <input type="search" placeholder="search Caterers" size="40" /><input type="button" value="search"/>
                 </div>
-                <div id="menu"></div>
+                <div id="mycaterers"></div>
                 <div class="width100">
                         <input type="button" name="preLinkMenu" id="preLinkMenu" class="blueLinks" style="margin-right: 70px;" value="Previous"/>
                         <input type="button" name="nextLinkMenu" id="nextLinkMenu" class="blueLinks" style="margin-left: 70px;" value="Next" />
                     </div>
                 
                 </div>
-                <div class="sideContent inline-block" id="sideDiv">
+                <div class="orderSideContent inline-block" id="sideDiv">
                         <p>Caterers arround your location</p>
                     <div id="innerSideDiv" ></div>
 
